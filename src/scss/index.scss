@@ -14,15 +14,7 @@ body{
         font-family: Roboto;
         background-color: $main-color;
 
-        @include sm{
-            background-color: red;
-        }
-        @include md-only{
-            background-color: blue;
-        }
-        @include lg{
-            background-color: $main-color;
-        }
+  
     
     .main{
         width: 100%;
@@ -32,7 +24,7 @@ body{
         box-shadow: $font-color;
         background-color: $main-color;
 
-        @include md{
+        @include md-only{
             max-width: 100%;
         }
         @include lg{
@@ -64,7 +56,7 @@ body{
 .triangle{
     margin-top: -100px;
 
-    @include md {
+    @include md-only {
         margin-top: -160px;
     }
 
@@ -87,12 +79,12 @@ body{
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        @include md {
+        @include md-only {
             margin-top: -350px;
         }
 
         @include lg{
-            margin-top: -580px;
+            margin-top: -400px;
         }
     a{
         text-decoration: none;
@@ -121,7 +113,7 @@ body{
         font-size: 15px;
     }
 
-    @include md {
+    @include md-only {
         margin-top: 50px;
         font-size: 20px;
         padding: 10px;
@@ -142,7 +134,7 @@ body{
         font-size: 14px;
     }
 
-    @include md {
+    @include md-only {
         margin-top: auto;
         font-size: 17px;
     }
@@ -159,7 +151,7 @@ hr {
         width: 50%;
     }
 
-    @include md{
+    @include md-only{
         margin: 10px 160px;
         width: 50%;
     }
@@ -173,12 +165,12 @@ hr {
          height: 1300px;
      }
 
-     @include md {
+     @include md-only {
         height: 1300px;
     }
 
     @include lg{
-        margin-top: 240px;
+        margin-top: 180px;
     }
 
 
@@ -202,13 +194,13 @@ hr {
                 font-size: 25px;
             }
 
-            @include md{
+            @include md-only{
                 margin-top: -900px;
                 font-size: 25px;
             }
 
             @include lg{
-                margin-top: -1450px;
+                margin-top: -1050px;
                 font-size: 25px;
             }
         }
@@ -254,7 +246,7 @@ hr {
                     font-size: smaller;
                 }
 
-                @include md {
+                @include md-only {
                     width: auto;
                     font-size: smaller;
                 }
