@@ -31,12 +31,12 @@
         <div> 
             <nav class="navMenu dropdownMenu">
                 <a href="#" class="firstItem">OVERVIEW</a>
-                <a href="#" class="list">MOA</a>
-                <a href="#" class="list">PK PROFILE</a>
-                <a href="#" class="list">ADMINISTRATION</a>
-                <a href="#" class="list">ADULT EFFICACY</a>
-                <a href="#" class="list">SAFETY AND TOLERABILITY</a>
-                <a href="#" class="list">HOSPITAL DISCHARGE</a>
+                <a href="#" id="list">MOA</a>
+                <a href="#" id="list">PK PROFILE</a>
+                <a href="#" id="list">ADMINISTRATION</a>
+                <a href="#" id="list">ADULT EFFICACY</a>
+                <a href="#" id="list">SAFETY AND TOLERABILITY</a>
+                <a href="#" id="list">HOSPITAL DISCHARGE</a>
             </nav>
         </div>
         <div>
@@ -115,5 +115,16 @@
     </div>
 </footer>
 </section>
+
+<script>
+    document.getElementsByClassName('firstItem')[0].onclick = function(){
+       console.log('well done');
+       var x = document.getElementById('list');
+       for(var i = 0; i < x.length; i++){
+        document.getElementById('list').style.visibility = 'visible';
+       }
+      
+    }
+</script>
 </body>
 </html>

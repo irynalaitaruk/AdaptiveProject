@@ -54,7 +54,7 @@ body{
 }
 
 .triangle{
-    margin-top: -100px;
+    margin-top: -130px;
 
     @include md-only {
         margin-top: -160px;
@@ -64,7 +64,13 @@ body{
         margin-top: -220px;
     }
  }
-
+    //.bgImg{
+     //   width: 100%;
+      //  @include sm{
+       //     height: 400px;
+      //      background-color: $font-color;
+     //   }
+    //}
     .navMenu{
         margin-top: -600px;
         display: flex;
@@ -75,9 +81,11 @@ body{
 
         @include sm{
             margin-right: 20px;
-            margin-top: -45%;
+            margin-top: -40%;
+            //flex-direction: column;
             justify-content: space-around;
             flex-wrap: wrap;
+            font-size: 10px;
         }
         @include md-only {
             margin-top: -350px;
@@ -86,17 +94,45 @@ body{
         @include lg{
             margin-top: -450px;
         }
+        /*
+        .firstItem{
+            color: $text-color;
+            cursor: pointer;
+
+         @include sm{
+             border: 1px solid $main-color;
+             padding: 7px;
+             text-align: center;
+         }
+    
+        }*/
+        #list{
+            visibility: visible;
+
+            //@include sm{
+               // visibility: hidden;
+            //}
+        }
     a{
         text-decoration: none;
         color: $text-color;
         cursor: pointer;
+    }
+    a:hover{
+        font-size: 15px;
+        border: 1px solid $main-color;
+        
+        @include sm{
+            font-size: 11px;
+           // padding: 5px;
+        }
     }
 
 
 
 }
 .headerText{
-    margin-left: 150px; 
+    margin-left: 70px; 
 
     @include sm{
         padding: 5px;
@@ -110,7 +146,7 @@ body{
 
     @include sm {
         margin-top: auto;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     @include md-only {
@@ -131,7 +167,7 @@ body{
 
     @include sm {
         margin-top: auto;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     @include md-only {
@@ -147,7 +183,7 @@ hr {
     border: 0.2px solid $main-color;
 
     @include sm{
-        margin: 10px 160px;
+        margin: 10px 120px;
         width: 50%;
     }
 
@@ -190,8 +226,8 @@ hr {
             font-weight: 350;
 
             @include sm{
-                margin-top: -710px;
-                font-size: 25px;
+                margin-top: -510px;
+                font-size: 22px;
             }
 
             @include md-only{
