@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MyProject</title>
     <link rel="stylesheet" href="bundle.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <section class="main">
@@ -29,14 +30,24 @@
         <img src="images/BACK_ANGLE.png" width="100%">
       </div>
         <div> 
-            <nav class="navMenu dropdownMenu">
-                <a href="#" class="firstItem">OVERVIEW</a>
-                <a href="#" id="list">MOA</a>
-                <a href="#" id="list">PK PROFILE</a>
-                <a href="#" id="list">ADMINISTRATION</a>
-                <a href="#" id="list">ADULT EFFICACY</a>
-                <a href="#" id="list">SAFETY AND TOLERABILITY</a>
-                <a href="#" id="list">HOSPITAL DISCHARGE</a>
+           
+            <nav class="navMenu">     
+                <div class="hamburger-container">
+                    <ul class="hamburger">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                </div>
+             
+                <a href="#" class="list">OVERVIEW</a>
+                <a href="#" class="list">MOA</a>
+                <a href="#" class="list">PK PROFILE</a>
+                <a href="#" class="list">ADMINISTRATION</a>
+                <a href="#" class="list">ADULT EFFICACY</a>
+                <a href="#" class="list">SAFETY AND TOLERABILITY</a>
+                <a href="#" class="list">HOSPITAL DISCHARGE</a>
+        
             </nav>
         </div>
         <div>
@@ -115,16 +126,31 @@
     </div>
 </footer>
 </section>
-
 <script>
-    document.getElementsByClassName('firstItem')[0].onclick = function(){
-       console.log('well done');
-       var x = document.getElementById('list');
-       for(var i = 0; i < x.length; i++){
-        document.getElementById('list').style.visibility = 'visible';
-       }
-      
+    $(document).ready(function() {
+  //toggle menu
+  $(".hamburger-container").click(function() {
+   $(".list").slideToggle();
+  });
+
+  //icon animation
+  var topBar = $(".hamburger li:nth-child(1)"),
+    middleBar = $(".hamburger li:nth-child(2)"),
+    bottomBar = $(".hamburger li:nth-child(3)");
+
+  $(".hamburger-container").on("click", function() {
+    if (middleBar.hasClass("rot-45deg")) {
+      topBar.removeClass("rot45deg");
+      middleBar.removeClass("rot-45deg");
+      bottomBar.removeClass("hidden");
+    } else {
+      bottomBar.addClass("hidden");
+      topBar.addClass("rot45deg");
+      middleBar.addClass("rot-45deg");
     }
+  });
+});
+
 </script>
 </body>
 </html>

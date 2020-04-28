@@ -64,13 +64,7 @@ body{
         margin-top: -220px;
     }
  }
-    //.bgImg{
-     //   width: 100%;
-      //  @include sm{
-       //     height: 400px;
-      //      background-color: $font-color;
-     //   }
-    //}
+
     .navMenu{
         margin-top: -600px;
         display: flex;
@@ -80,11 +74,10 @@ body{
         padding: 10px; 
 
         @include sm{
+            display: flex;
+            //flex-direction: column;
             margin-right: 20px;
             margin-top: -40%;
-            //flex-direction: column;
-            justify-content: space-around;
-            flex-wrap: wrap;
             font-size: 10px;
         }
         @include md-only {
@@ -94,25 +87,76 @@ body{
         @include lg{
             margin-top: -450px;
         }
-        /*
-        .firstItem{
-            color: $text-color;
-            cursor: pointer;
 
-         @include sm{
-             border: 1px solid $main-color;
-             padding: 7px;
-             text-align: center;
-         }
-    
-        }*/
-        #list{
-            visibility: visible;
-
-            //@include sm{
-               // visibility: hidden;
-            //}
+    @include sm{
+        .list{
+            display: none;
         }
+    }
+    @include md-only{
+        .list{
+            display: block;
+        }
+    }
+        ///////////////////////HUMBURGER MENU
+        @include sm{
+        ul.hamburger li {
+            height: 5px;
+            background: $main-color;
+            content: "";
+            position: relative;
+            transition: 0.25s ease-in-out;
+            list-style: none;
+          }
+          
+          .hidden {
+            opacity: 0;
+          }
+          
+          .rot45deg {
+            transform: rotate(45deg);
+            top: 10px !important;
+          }
+          
+          .rot-45deg {
+            transform: rotate(-45deg);
+          }
+          
+          ul.hamburger {
+            display: block;
+          }
+          ul.hamburger li:nth-child(1) {
+            top: 0;
+          }
+          ul.hamburger li:nth-child(2) {
+            top: 5px;
+          }
+          ul.hamburger li:nth-child(3) {
+            top: 10px;
+          }
+          
+          .hamburger-container {
+            width: 38px;
+            cursor: pointer;
+            float: right;
+          }
+        
+        
+          
+        }
+        ///////////////////////
+        @include md-only{
+            .hamburger-container{
+                display: none;
+            }
+        }
+        @include lg{
+            .hamburger-container{
+                display: none;
+            }
+        }
+
+
     a{
         text-decoration: none;
         color: $text-color;
@@ -121,10 +165,9 @@ body{
     a:hover{
         font-size: 15px;
         border: 1px solid $main-color;
-        
+
         @include sm{
             font-size: 11px;
-           // padding: 5px;
         }
     }
 
