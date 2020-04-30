@@ -85,7 +85,7 @@ body{
         }
 
         @include lg{
-            margin-top: -450px;
+            margin-top: -43%;
         }
 
     @include sm{
@@ -175,7 +175,7 @@ body{
 
 }
 .headerText{
-    margin-left: 70px; 
+    margin-left: 125px; 
 
     @include sm{
         padding: 5px;
@@ -199,7 +199,7 @@ body{
     }
 
     @include lg {
-        margin-top: 80px;
+        margin-top: 110px;
         font-size: 20px;
         padding: 10px;
     }
@@ -220,7 +220,7 @@ body{
 }
 hr {
     position: relative;
-    margin: 20px 150px;
+    margin: 20px 160px;
     width: 550px;
     font-size: 1px;
     border: 0.2px solid $main-color;
@@ -239,6 +239,7 @@ hr {
  //MAIN PART
  .mainSection{
      margin-top: 150px;
+     height: auto;
    
      @include sm {
          height: 1300px;
@@ -249,7 +250,7 @@ hr {
     }
 
     @include lg{
-        margin-top: 180px;
+        margin-top: 230px;
     }
 
 
@@ -258,6 +259,12 @@ hr {
 
         @include sm{
             padding: 10px;
+        }
+        @include md-only{
+            padding: 70px;
+        }
+        @include lg{
+            padding: 40px;
         }
 
 
@@ -269,7 +276,7 @@ hr {
             font-weight: 350;
 
             @include sm{
-                margin-top: -510px;
+                margin-top: -100%;
                 font-size: 22px;
             }
 
@@ -279,7 +286,8 @@ hr {
             }
 
             @include lg{
-                margin-top: -1050px;
+                //margin-top: -1050px;
+                margin-top: -110%;
                 font-size: 25px;
             }
         }
@@ -343,7 +351,9 @@ hr {
                 @include sm {
                     width: auto;
                 }
-
+                @include md-only {
+                    margin-top: -85px;
+                }
                 figure{
                     text-align: center;
                     padding: 15px;
@@ -354,6 +364,7 @@ hr {
 
                         @include sm {
                             width: 100%;
+                            margin-top: 20px;
                         }
                     }
                 }

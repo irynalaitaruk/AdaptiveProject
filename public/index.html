@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MyProject</title>
     <link rel="stylesheet" href="bundle.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+   <script src="js/script.js"></script>
 </head>
 <body>
 <section class="main">
@@ -126,31 +127,6 @@
     </div>
 </footer>
 </section>
-<script>
-    $(document).ready(function() {
-  //toggle menu
-  $(".hamburger-container").click(function() {
-   $(".list").slideToggle();
-  });
 
-  //icon animation
-  var topBar = $(".hamburger li:nth-child(1)"),
-    middleBar = $(".hamburger li:nth-child(2)"),
-    bottomBar = $(".hamburger li:nth-child(3)");
-
-  $(".hamburger-container").on("click", function() {
-    if (middleBar.hasClass("rot-45deg")) {
-      topBar.removeClass("rot45deg");
-      middleBar.removeClass("rot-45deg");
-      bottomBar.removeClass("hidden");
-    } else {
-      bottomBar.addClass("hidden");
-      topBar.addClass("rot45deg");
-      middleBar.addClass("rot-45deg");
-    }
-  });
-});
-
-</script>
 </body>
 </html>
