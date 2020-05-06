@@ -1,6 +1,7 @@
 @import "config";
 @import "mixins";
 
+
 @include google-font(Roboto);
 
  *{
@@ -16,8 +17,8 @@ body{
 
   
     
-    .main{
-        width: 100%;
+    .mainBox{
+        width: 960px;
         height: auto;
         border: 1px solid $font-color;
         margin: auto;
@@ -27,11 +28,11 @@ body{
         @include md-only{
             max-width: 100%;
         }
-        @include lg{
-            max-width: 100%;
-        }
+       // @include lg{
+           // max-width: 100%;
+        //}
 //HEADER
-.mainLogo{
+.topHeader{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,6 +53,51 @@ body{
         font-size: 10px;
      }
 }
+.hamburger-container{
+    display: none;
+}
+.navMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 14px;
+    padding: 35px;
+    background-color: $font-color;
+
+    li{
+      list-style: none;
+
+      a{
+        text-decoration: none;
+        color: $text-color;
+        cursor: pointer;
+    }
+    }
+
+    @include sm{
+        display: flex;
+        //flex-direction: column;
+        margin-right: 20px;
+       // margin-top: -40%;
+        font-size: 10px;
+        padding: 20px;
+    }
+    //@include md-only {
+       // margin-top: -350px;
+   // }
+
+    //@include lg{
+        //margin-top: -43%;
+   // }
+
+@include sm{
+    .list{
+        display: none;
+    }
+}
+}
+/*
+
 
 .triangle{
     margin-top: -130px;
@@ -64,36 +110,6 @@ body{
         margin-top: -220px;
     }
  }
-
-    .navMenu{
-        margin-top: -600px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: 14px;
-        padding: 10px; 
-
-        @include sm{
-            display: flex;
-            //flex-direction: column;
-            margin-right: 20px;
-            margin-top: -40%;
-            font-size: 10px;
-            padding: 20px;
-        }
-        @include md-only {
-            margin-top: -350px;
-        }
-
-        @include lg{
-            margin-top: -43%;
-        }
-
-    @include sm{
-        .list{
-            display: none;
-        }
-    }
  
     //}
         ///////////////////////HUMBURGER MENU
@@ -155,102 +171,104 @@ body{
         }
 
 
-    a{
-        text-decoration: none;
-        color: $text-color;
-        cursor: pointer;
-    }
-    a:hover{
-        font-size: 15px;
-        border: 1px solid $main-color;
-
-        @include sm{
-            font-size: 11px;
-        }
-    }
 
 
 
 }
-.headerText{
-    margin-left: 125px; 
 
-    @include sm{
-        padding: 5px;
-    }
-}
-
-.first{
-    margin-top: 130px;
-    color: $text-color;
-    font-size: 30px;
-
-    @include sm {
-        margin-top: auto;
-        font-size: 14px;
-    }
-
-    @include md-only {
-        margin-top: 50px;
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    @include lg {
-        margin-top: 110px;
-        font-size: 20px;
-        padding: 10px;
-    }
-}
-.second{
-    font-size: 27px;
-    color: $main-color;
-
-    @include sm {
-        margin-top: auto;
-        font-size: 12px;
-    }
-
-    @include md-only {
-        margin-top: auto;
-        font-size: 17px;
-    }
-}
-hr {
-    position: relative;
-    margin: 20px 160px;
-    width: 550px;
-    font-size: 1px;
-    border: 0.2px solid $main-color;
-
-    @include sm{
-        margin: 10px 120px;
-        width: 50%;
-    }
-
-    @include md-only{
-        margin: 10px 160px;
-        width: 50%;
-    }
- }
-
+*/
  //MAIN PART
- .mainSection{
-     margin-top: 150px;
+ .mainBlock{
      height: auto;
+     width: auto;
+
+  
+     
+    .block1{
+        background-color: $font-color;
+        display: flex;
+        justify-content: flex-start;
+
+
+        .triangle{
+            height: auto;
+           
+           
+        }
+
+        .headerText{
+             padding: 20px;
+        
+            @include sm{
+                padding: 5px;
+            }
+        }
+        
+        .first{
+            color: $text-color;
+            font-size: 25px;
+        
+            @include sm {
+                margin-top: auto;
+                font-size: 14px;
+            }
+        
+            @include md-only {
+                margin-top: 50px;
+                font-size: 20px;
+                padding: 10px;
+            }
+        
+        }
+        .second{
+            font-size: 20px;
+            color: #e6e1ce;
+        
+            @include sm {
+                margin-top: auto;
+                font-size: 12px;
+            }
+        
+            @include md-only {
+                margin-top: auto;
+                font-size: 17px;
+            }
+        }
+        hr {
+            position: relative;
+            width: 90%;
+            font-size: 1px;
+            border: 0.2px solid $main-color;
+        
+            @include sm{
+                margin: 10px 120px;
+                width: 50%;
+            }
+        
+            @include md-only{
+                margin: 10px 160px;
+                width: 50%;
+            }
+         }
+
+        // &::after{
+          //  content: url('http://localhost:3000/images/Slice_1.png');
+        //}
+    }
+    .slice{
+       width: 960px;
+    }
+
+    .slice2{
+       width: 960px;
+       margin-bottom: -5px;
+    }
+
+
+.block2{
+    background-color: #f8f6f0;
+    height: auto;
    
-     @include sm {
-         height: 1300px;
-     }
-
-     @include md-only {
-        height: 1300px;
-    }
-
-    @include lg{
-        margin-top: 230px;
-    }
-
 
      .firstArticle{
         padding: 40px; 
@@ -268,24 +286,19 @@ hr {
 
         h2{
             color: $font-color;
-            margin-top: -950px;
             text-align: center;
             font-size: $headers-fontSize;
             font-weight: 350;
 
             @include sm{
-                margin-top: -100%;
                 font-size: 22px;
             }
 
             @include md-only{
-                margin-top: -900px;
                 font-size: 25px;
             }
 
             @include lg{
-                //margin-top: -1050px;
-                margin-top: -110%;
                 font-size: 25px;
             }
         }
@@ -349,9 +362,7 @@ hr {
                 @include sm {
                     width: auto;
                 }
-                @include md-only {
-                    margin-top: -85px;
-                }
+    
                 figure{
                     text-align: center;
                     padding: 15px;
@@ -371,7 +382,7 @@ hr {
     }
      
  }
-
+    }
  //FOOTER
 footer{
     background-color: $footer-color;
@@ -383,12 +394,12 @@ footer{
         padding: 10px;
         text-align: left;
     }
-    .footerBlock{
+    .footerBlockFirst{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: baseline;
+        justify-content: flex-start;
         font-size: 14px;
 
         .footerBlock1{
@@ -398,21 +409,21 @@ footer{
         .footerBlock2{
           @extend.footerBlock1;
         }
-        .footerBlock3{
-            width: 40%;
-            padding: 30px;
-        }
-        .footerBlock4{
-            @extend .footerBlock3;
-            font-size: 12px;
-        }
+   
     }
+    .footerBlockSecond{
+        column-count: 2;
+        column-gap: 60px;
+        padding: 20px;
+        font-size: 14px;
+    
+   
+  }
 }
 
 
 
 
 
-    }//main
-
-}//body
+    }
+}
