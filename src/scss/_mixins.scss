@@ -25,6 +25,13 @@
     }
  }
 
+ @mixin test {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+
+
 
 
  @mixin google-font($name) {

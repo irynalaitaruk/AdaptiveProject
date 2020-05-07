@@ -15,6 +15,12 @@ body{
         font-family: Roboto;
         background-color: $main-color;
 
+        @include sm{
+            background-color: yellowgreen;
+        }
+        @include md-only{
+            background-color: aqua;
+        }
   
     
     .mainBox{
@@ -25,12 +31,13 @@ body{
         box-shadow: $font-color;
         background-color: $main-color;
 
-        @include md-only{
-            max-width: 100%;
+        @include sm{
+            width: 100%;
         }
-       // @include lg{
-           // max-width: 100%;
-        //}
+
+        @include md-only{
+            width: 100%;
+        }
 //HEADER
 .topHeader{
     display: flex;
@@ -50,11 +57,20 @@ body{
     text-align: right;
 
     @include sm{
-        font-size: 10px;
+        display: none;
+     }
+
+     @include md-only{
+        font-size: 12px;
      }
 }
 .hamburger-container{
     display: none;
+
+    @include sm{
+        display: block;
+        background-color: $font-color;
+    }
 }
 .navMenu{
     display: flex;
@@ -64,54 +80,40 @@ body{
     padding: 35px;
     background-color: $font-color;
 
+    @include sm{
+        display: none;
+    }
+
+    @include test{
+        font-size: 12px;
+        display: flex;
+     }
+
+     @include lg{
+        display: flex;
+     }
+
     li{
       list-style: none;
+
+      @include sm{
+        padding-top: 10px;
+       }
 
       a{
         text-decoration: none;
         color: $text-color;
         cursor: pointer;
-    }
+
+
+     }
     }
 
-    @include sm{
-        display: flex;
-        //flex-direction: column;
-        margin-right: 20px;
-       // margin-top: -40%;
-        font-size: 10px;
-        padding: 20px;
-    }
-    //@include md-only {
-       // margin-top: -350px;
-   // }
 
-    //@include lg{
-        //margin-top: -43%;
-   // }
+   
 
-@include sm{
-    .list{
-        display: none;
-    }
 }
-}
-/*
 
-
-.triangle{
-    margin-top: -130px;
-
-    @include md-only {
-        margin-top: -160px;
-    }
-
-    @include lg {
-        margin-top: -220px;
-    }
- }
- 
-    //}
         ///////////////////////HUMBURGER MENU
         @include sm{
         ul.hamburger li {
@@ -152,7 +154,9 @@ body{
           .hamburger-container {
             width: 38px;
             cursor: pointer;
-            float: right;
+            padding: 5px;
+            position: absolute;
+            right: 0;
           }
         
         
@@ -171,14 +175,8 @@ body{
         }
 
 
-
-
-
-}
-
-*/
  //MAIN PART
- .mainBlock{
+ main{
      height: auto;
      width: auto;
 
@@ -186,21 +184,33 @@ body{
      
     .block1{
         background-color: $font-color;
-        display: flex;
-        justify-content: flex-start;
+        overflow: auto;
 
+        @include sm{
+            padding-top: 80px;
+         }
 
         .triangle{
-            height: auto;
-           
-           
+            float: left;
+
+            @include sm{
+                padding-right: 50px;
+            }
+
+            @include md-only{
+                padding-right: 50px;
+            }
         }
 
         .headerText{
-             padding: 20px;
+             padding: 30px;
         
             @include sm{
-                padding: 5px;
+                padding: 20px;
+            }
+
+            @include md-only{
+                padding: 8px;
             }
         }
         
@@ -236,7 +246,7 @@ body{
         }
         hr {
             position: relative;
-            width: 90%;
+            width: 80%;
             font-size: 1px;
             border: 0.2px solid $main-color;
         
@@ -246,8 +256,8 @@ body{
             }
         
             @include md-only{
-                margin: 10px 160px;
-                width: 50%;
+                //margin: 10px 160px;
+                width: 80%;
             }
          }
 
@@ -257,11 +267,24 @@ body{
     }
     .slice{
        width: 960px;
+
+       @include sm{
+           display: none;
+       }
+
+       @include md-only{
+        width: 100%;
     }
+    }
+
 
     .slice2{
        width: 960px;
        margin-bottom: -5px;
+
+       @include sm{
+        display: none;
+      }
     }
 
 
@@ -274,7 +297,7 @@ body{
         padding: 40px; 
 
         @include sm{
-            padding: 10px;
+            padding: 40px;
         }
         @include md-only{
             padding: 70px;
@@ -291,7 +314,7 @@ body{
             font-weight: 350;
 
             @include sm{
-                font-size: 22px;
+                font-size: 18px;
             }
 
             @include md-only{
@@ -309,7 +332,7 @@ body{
             font-weight: 600;
 
             @include sm{
-                font-size: 14px;
+                font-size: 12px;
             }
 
             @include lg{
@@ -331,8 +354,7 @@ body{
 
             .trialDesign{
                 order: 1;
-                width: 350px;
-                height: 220px;
+                width: 40%;
                 padding: 20px;
                 margin: 15px;
                 line-height: 20px;
@@ -356,16 +378,22 @@ body{
              }
              .briviant{
                 order: 3;
-                width: 800px;
                 @extend .trialResult;
 
                 @include sm {
-                    width: auto;
+                    width: 100%;
+              
                 }
     
                 figure{
                     text-align: center;
                     padding: 15px;
+                    position: relative;
+
+                    @include sm {
+                        width: 100%;
+                        text-align: center;              
+                    }
 
                     figcaption{
                         font-weight: 600;
@@ -373,7 +401,7 @@ body{
 
                         @include sm {
                             width: 100%;
-                            margin-top: 20px;
+                           
                         }
                     }
                 }
@@ -402,6 +430,10 @@ footer{
         justify-content: flex-start;
         font-size: 14px;
 
+        @include md-only{
+            font-size: 12px;
+        }
+
         .footerBlock1{
             width: auto;
             padding: 15px;
@@ -417,6 +449,16 @@ footer{
         padding: 20px;
         font-size: 14px;
     
+        @include sm{
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include md-only{
+            font-size: 12px;
+        }
+
+ 
    
   }
 }

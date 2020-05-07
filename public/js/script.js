@@ -2,7 +2,15 @@
     $(document).ready(function() {
   //toggle menu
   $(".hamburger-container").click(function() {
-   $(".list").slideToggle();
+    if($(window).innerWidth() <= 751) {
+      $(".navMenu").slideToggle('fast').css({
+        "position":"absolute",
+        "opacity":"0.8",
+        "width":"80%"
+      });
+
+    }
+
   });
 
   //icon animation
