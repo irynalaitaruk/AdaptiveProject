@@ -2,16 +2,19 @@
     $(document).ready(function() {
   //toggle menu
   $(".hamburger-container").click(function() {
-    if($(window).innerWidth() <= 751) {
-      $(".navMenu").slideToggle('fast').css({
-        "position":"absolute",
-        "opacity":"0.8",
-        "width":"80%"
-      });
+    if($(window).innerWidth() <= 767) {
+      $(".navMenu").slideToggle();
+      //$('.navMenu').toggleClass('active');
+/*
+      if( $("ul").hasClass("navMenu") ) {
+        $("ul").removeClass("navMenu");
 
+    }else{
+      $("ul").addClass("navMenu");
     }
-
-  });
+*/
+  }
+});
 
   //icon animation
   var topBar = $(".hamburger li:nth-child(1)"),

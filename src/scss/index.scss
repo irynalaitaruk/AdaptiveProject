@@ -68,8 +68,10 @@ body{
     display: none;
 
     @include sm{
-        display: block;
+        display: block !important;
         background-color: $font-color;
+        margin: 10px;
+        //color: $main-color;
     }
 }
 .navMenu{
@@ -82,16 +84,32 @@ body{
 
     @include sm{
         display: none;
+        position: absolute;
+        opacity: 0.8;
+        width: 50%;
+        //height: auto;
     }
 
-    @include test{
+    @include md-only{
         font-size: 12px;
-        display: flex;
+        display: flex !important;
      }
 
      @include lg{
-        display: flex;
+        display: flex !important;
      }
+     ////////////////////////////////
+     .active {
+        font-size: 12px;
+        padding: 15px;
+        //background-color: $font-color;
+        display: block;
+        position: absolute;
+        z-index: 999;
+        width: 50%;
+        opacity: 0.6;
+      }
+      //////////////////////////////
 
     li{
       list-style: none;
@@ -114,7 +132,7 @@ body{
 
 }
 
-        ///////////////////////HUMBURGER MENU
+//HUMBURGER MENU
         @include sm{
         ul.hamburger li {
             height: 5px;
@@ -256,7 +274,6 @@ body{
             }
         
             @include md-only{
-                //margin: 10px 160px;
                 width: 80%;
             }
          }
@@ -377,6 +394,7 @@ body{
                 background-color: #f8f6f0;
              }
              .briviant{
+                 width: 100%;
                 order: 3;
                 @extend .trialResult;
 
