@@ -1,0 +1,244 @@
+@import "../config";
+@import "../mixins";
+
+ main{
+     height: auto;
+     width: auto;
+
+  
+     
+    .block1{
+        background-color: $font-color;
+        overflow: auto;
+
+        @include sm{
+            padding-top: 80px;
+         }
+
+        .triangle{
+            float: left;
+            //margin-right: 50px;
+
+            @include sm{
+                padding-right: 50px;
+            }
+
+            @include md-only{
+                padding-right: 50px;
+            }
+
+            @include lg{
+                padding-right: 50px;
+            }
+        }
+
+        .headerText{
+             padding: 30px;
+        
+            @include sm{
+                padding: 20px;
+            }
+
+            @include md-only{
+                padding: 8px;
+            }
+        }
+        
+        .first{
+            color: $text-color;
+            font-size: 25px;
+        
+            @include sm {
+                margin-top: auto;
+                font-size: 14px;
+            }
+        
+            @include md-only {
+                margin-top: 50px;
+                font-size: 20px;
+                padding: 10px;
+            }
+        
+        }
+        .second{
+            font-size: 20px;
+            color: #e6e1ce;
+        
+            @include sm {
+                margin-top: auto;
+                font-size: 12px;
+            }
+        
+            @include md-only {
+                margin-top: auto;
+                font-size: 17px;
+            }
+        }
+        hr {
+            position: relative;
+            width: 80%;
+            font-size: 1px;
+            border: 0.2px solid $main-color;
+        
+            @include sm{
+                margin: 10px 120px;
+                width: 50%;
+            }
+        
+            @include md-only{
+                width: 80%;
+            }
+         }
+
+        // &::after{
+          //  content: url('http://localhost:3000/images/Slice_1.png');
+        //}
+    }
+    .slice{
+       width: 100%;
+       //background-size: cover;
+
+       @include sm{
+           display: none;
+       }
+
+       @include md-only{
+        width: 100%;
+    }
+    }
+
+
+    .slice2{
+       width: 960px;
+       margin-bottom: -5px;
+
+       @include sm{
+        display: none;
+      }
+    }
+
+
+.block2{
+    background-color: #f8f6f0;
+    height: auto;
+   
+
+     .firstArticle{
+        padding: 40px; 
+
+        @include sm{
+            padding: 40px;
+        }
+        @include md-only{
+            padding: 70px;
+        }
+        @include lg{
+            padding: 40px;
+        }
+
+
+        h2{
+            color: $font-color;
+            text-align: center;
+            font-size: $headers-fontSize;
+            font-weight: 350;
+
+            @include sm{
+                font-size: 18px;
+            }
+
+            @include md-only{
+                font-size: 25px;
+            }
+
+            @include lg{
+                font-size: 25px;
+            }
+        }
+        .subtitle{
+            font-size: 15px;
+            text-transform: uppercase;
+            padding: 10px;
+            font-weight: 600;
+
+            @include sm{
+                font-size: 12px;
+            }
+
+            @include lg{
+                margin-left: 140px;
+            }
+        }
+        .mainSectionBlock{
+            display: flex;
+            flex-wrap: wrap;
+
+
+            @include sm {
+                align-items: center;
+            }
+
+            @include lg {
+                justify-content: space-around;
+            }
+
+            .trialDesign{
+                order: 1;
+                width: 40%;
+                padding: 20px;
+                margin: 15px;
+                line-height: 20px;
+                background-color: white;
+                border-radius: 20px;
+
+                @include sm {
+                    width: auto;
+                    font-size: smaller;
+                }
+
+                @include md-only {
+                    width: auto;
+                    font-size: smaller;
+                }
+             }
+             .trialResult{
+                 @extend .trialDesign;
+                order: 2;
+                background-color: #f8f6f0;
+             }
+             .briviant{
+                 width: 100%;
+                order: 3;
+                @extend .trialResult;
+
+                @include sm {
+                    width: 100%;
+              
+                }
+    
+                figure{
+                    text-align: center;
+                    padding: 15px;
+                    position: relative;
+
+                    @include sm {
+                        width: 100%;
+                        text-align: center;              
+                    }
+
+                    figcaption{
+                        font-weight: 600;
+                        padding: 15px;
+
+                        @include sm {
+                            width: 100%;
+                           
+                        }
+                    }
+                }
+             }
+        }
+    }
+     
+ }
+    }

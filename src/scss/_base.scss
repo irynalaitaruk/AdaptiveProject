@@ -1,0 +1,29 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+@import "config";
+@import "mixins";
+
+body{
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        font-family: Roboto;
+        background-color: $main-color;
+}
+li{
+    list-style: none;
+
+    @include sm{
+      padding-top: 10px;
+     }
+
+    a{
+      text-decoration: none;
+      color: $text-color;
+      cursor: pointer;
+
+
+   }
+  }

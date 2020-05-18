@@ -1,0 +1,19 @@
+@import "config";
+@import "mixins";
+
+.mainBox{
+    width: 960px;
+    height: auto;
+    border: 1px solid $font-color;
+    margin: auto;
+    box-shadow: $font-color;
+    background-color: $main-color;
+
+    @include sm{
+        width: 100%;
+    }
+
+    @include md-only{
+        width: 100%;
+    }
+}

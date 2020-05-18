@@ -1,0 +1,126 @@
+@import "../config";
+@import "../mixins";
+
+
+        .hamburger-container{
+            display: none;
+        
+            @include sm{
+                display: block !important;
+                background-color: $font-color;
+                margin: 10px;
+            }
+        }
+        .navMenu{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 14px;
+            padding: 35px;
+            background-color: $font-color;
+        
+            @include sm{
+                display: none;
+                position: absolute;
+                opacity: 0.8;
+                width: 50%;
+            }
+        
+            @include md-only{
+                font-size: 12px;
+                display: flex !important;
+             }
+        
+             @include lg{
+                display: flex !important;
+             }
+             ////////////////////////////////
+             .active {
+                font-size: 12px;
+                padding: 15px;
+                display: block;
+                position: absolute;
+                z-index: 999;
+                width: 50%;
+                opacity: 0.6;
+              }
+              //////////////////////////////
+        
+            li{
+              list-style: none;
+        
+              @include sm{
+                padding-top: 10px;
+               }
+        
+              a{
+                text-decoration: none;
+                color: $text-color;
+                cursor: pointer;
+        
+        
+             }
+            }
+        
+        
+        
+        
+        }
+        
+        //HUMBURGER MENU
+                @include sm{
+    
+                  .hamburger-container {
+                    width: 50px;
+                    cursor: pointer;
+                    padding: 5px;
+                    position: absolute;
+                    right: 0;
+
+                    ul.hamburger li {
+                        background: $main-color;
+                        content: "";
+                        position: relative;
+                        transition: 0.25s ease-in-out;
+                      }
+
+                
+                          li:nth-child(1) {
+                        top: 0;
+                      }
+                          li:nth-child(2) {
+                        top: 2px;
+                      }
+                           li:nth-child(3) {
+                        top: 4px;
+                      }
+
+                  }
+        
+                  .hidden {
+                    opacity: 0;
+                  }
+        
+                  .rot45deg {
+                    transform: rotate(45deg);
+                    top: 12px !important;
+                  }
+        
+                  .rot-45deg {
+                    transform: rotate(-45deg);
+                  }
+
+        
+                }
+                ///////////////////////
+                @include md-only{
+                    .hamburger-container{
+                        display: none;
+                    }
+                }
+                @include lg{
+                    .hamburger-container{
+                        display: none;
+                    }
+                }
+        
