@@ -1,0 +1,81 @@
+@import "../config";
+@import "../mixins";
+
+.molecularBlock{
+    padding: 40px;
+    //font-family: Roboto;
+
+    @include sm{
+        font-size: smaller;
+    }
+
+    @include md-only{
+        font-size: smaller;
+    }
+
+    h2{
+        color: $font-color;
+        text-align: center;
+        font-size: $headers-fontSize;
+        font-weight: 350;
+
+        @include sm{
+            font-size: 18px;
+        }
+
+        @include md-only{
+            font-size: 25px;
+        }
+
+        @include lg{
+            font-size: 25px;
+        }
+    }
+    .subtitle{
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 600;
+
+        @include sm{
+            font-size: 12px;
+        }
+
+        @include lg{
+            margin-left: 140px;
+        }
+    }
+    .list{
+        padding: 20px;
+        margin: 15px;
+        line-height: 20px;
+    }
+
+    li{
+        list-style-type: disc;
+    }
+
+    .imgBlock{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include sm{
+            flex-direction: column;
+        }
+
+        .image{
+            margin: 20px;
+        }
+
+       .additionalList{
+           margin-top: 50px;
+           font-size: smaller;
+       }
+       .additionalImg{
+        margin-top: 10px;
+        font-size: smaller;
+    }
+       
+    }
+}
