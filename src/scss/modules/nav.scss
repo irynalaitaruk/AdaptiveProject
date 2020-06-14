@@ -1,11 +1,12 @@
 @import "../config";
 @import "../mixins";
 
-
+/*
         .hamburger-container{
             display: none;
         
             @include sm{
+                //width: 50px;
                 display: block !important;
                 background-color: $font-color;
                 margin: 10px;
@@ -18,12 +19,22 @@
             font-size: 14px;
             padding: 35px;
             background-color: $font-color;
+
+            //.closeBtn{
+             //   display: none;
+            //}
         
             @include sm{
-                display: none;
+                display: block;
+                //flex-direction: column;
                 position: absolute;
                 opacity: 0.8;
                 width: 50%;
+                //height: 100%;
+
+                //.closeBtn{
+                  //  display: block;
+                //}
             }
         
             @include md-only{
@@ -68,6 +79,7 @@
         }
         
         //HUMBURGER MENU
+       
                 @include sm{
     
                   .hamburger-container {
@@ -123,4 +135,154 @@
                         display: none;
                     }
                 }
-        
+                
+
+
+                */
+      //////////////////////
+      @include sm {
+       
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $font-color;
+  opacity: 0.9;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+/*
+.overlay-content{
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+*/
+.overlay a{
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $main-color;
+  display: block;
+  transition: 0.3s;
+}
+
+
+
+
+/*
+.humburger-menu{
+  display: block;
+  font-size:50px;
+  cursor:pointer;
+  background-color: #7c0041;
+  color: antiquewhite;
+  text-align: right;
+}
+*/
+      }
+  
+      ///
+      .overlay-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 14px;
+        padding: 35px;
+        background-color: $font-color;
+
+        @include sm{
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          top: 10%;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+        }
+        @include md-only{
+          display: flex;
+          flex-direction: row;
+        }
+        @include lg{
+          display: flex;
+          flex-direction: row;
+        }
+      }
+.humburger-menu{
+  display: block;
+  font-size:50px;
+  cursor:pointer;
+  background-color: #7c0041;
+  color: antiquewhite;
+  text-align: right;
+
+  @include md-only{
+    display: none;
+  }
+  @include lg{
+    display: none;
+  }
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+
+  @include md-only{
+    display: none;
+  }
+  @include lg{
+    display: none;
+  }
+}
+
+@include sm{
+.is-hidden{
+ display: none;
+  }
+}
+
+@include sm{
+  .footertxt{
+   padding: 10px;
+    }
+  }
+
+  @include md-only{
+    .footertxt{
+     padding: 10px;
+      }
+    }
+
+
+
+
+/*
+      <div class="hamburger-container">
+            <ul class="hamburger">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+        </div>
+        <nav> 
+               
+           <ul class="navMenu">
+               <li><a href="#">OVERVIEW</a></li>
+               <li><a href="#">MOA</a></li>
+               <li> <a href="#">PK PROFILE</a></li>
+               <li><a href="#">ADMINISTRATION</a></li>
+               <li><a href="#">ADULT EFFICACY</a></li>
+               <li><a href="#">SAFETY AND TOLERABILITY</a></li>
+               <li><a href="#">HOSPITAL DISCHARGE</a></li>
+           </ul>
+        </nav>
+        */

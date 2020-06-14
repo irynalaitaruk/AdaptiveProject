@@ -4,10 +4,11 @@
 .slice2{
     width: 960px;
     margin-bottom: -5px;
-
+     
     @include sm{
-     display: none;
-   }
+        display: none;
+      }
+  
  }
 
  .briviactExibits{

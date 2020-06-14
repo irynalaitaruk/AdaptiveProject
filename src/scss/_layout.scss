@@ -1,6 +1,6 @@
-@import "config";
-@import "mixins";
-
+//@import "config";
+//@import "mixins";
+/*
 .mainBox{
     width: 960px;
     height: auto;
@@ -15,5 +15,18 @@
 
     @include md-only{
         width: 100%;
+    }
+}
+*/
+.topHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    @include sm{
+       flex-direction: column;
+       padding: 20px;
     }
 }

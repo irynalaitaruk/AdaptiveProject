@@ -1,18 +1,9 @@
-
+/*
     $(document).ready(function() {
   //toggle menu
   $(".hamburger-container").click(function() {
     if($(window).innerWidth() <= 767) {
       $(".navMenu").slideToggle();
-      //$('.navMenu').toggleClass('active');
-/*
-      if( $("ul").hasClass("navMenu") ) {
-        $("ul").removeClass("navMenu");
-
-    }else{
-      $("ul").addClass("navMenu");
-    }
-*/
   }
 });
 
@@ -33,3 +24,13 @@
     }
   });
 });
+*/
+/*
+function openNav() {
+  document.getElementsById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementsById("myNav").style.height = "0%";
+}
+*/

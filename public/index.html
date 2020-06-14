@@ -11,7 +11,7 @@
 <body>
 <section class="mainBox">
 <header>
-        <div class="topHeader">
+    <div class="topHeader">    
             <div class="logo">
                   <img src="images/BRIV_LOGO_mobile.jpg" alt="Logo image"
                   srcset="images/BRIV_LOGO_mobile.jpg 400w, images/BRIV_Logo_391x114_-_IN_BUILD_KIT.png 750w"
@@ -19,30 +19,29 @@
                   (min-width: 640px) and (max-width: 1023px) 50vw,
                   (max-width: 639px) 100vw">  
             </div>
-            <div class="text">
-               <p> Important Safety Information | Prescribing Information | For Patient</p>
+            <div class="is-hidden">
+               <p class="text"> Important Safety Information | Prescribing Information | For Patient</p>
                <img src="images/ucbCARES®_1-844-599-CARE_(2273).png" alt="ucb">
             </div>
-        </div>
-        <div class="hamburger-container">
-            <ul class="hamburger">
-              <li></li>
-              <li></li>
-              <li></li>
+    </div>
+        
+        
+        
+
+
+        <div id="myNav" class="overlay">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <ul class="overlay-content">
+                <li><a href="#">OVERVIEW</a></li>
+                <li><a href="#">MOA</a></li>
+                <li> <a href="#">PK PROFILE</a></li>
+                <li><a href="#">ADMINISTRATION</a></li>
+                <li><a href="#">ADULT EFFICACY</a></li>
+                <li><a href="#">SAFETY AND TOLERABILITY</a></li>
+                <li><a href="#">HOSPITAL DISCHARGE</a></li>
             </ul>
-        </div>
-        <nav>     
-           <ul class="navMenu">
-               <li><a href="#">OVERVIEW</a></li>
-               <li><a href="#">MOA</a></li>
-               <li> <a href="#">PK PROFILE</a></li>
-               <li><a href="#">ADMINISTRATION</a></li>
-               <li><a href="#">ADULT EFFICACY</a></li>
-               <li><a href="#">SAFETY AND TOLERABILITY</a></li>
-               <li><a href="#">HOSPITAL DISCHARGE</a></li>
-           </ul>
-        </nav>
-   
+          </div>
+        <div class="humburger-menu" onclick="openNav()">&#9776;</div> 
 </header>
 
 <main>
@@ -208,22 +207,36 @@
 <footer>
     <div class="footerBlockFirst">
         <h4>Contact information</h4>
-        <div class="footerBlock1">If you have any questions or want more information, please contact ucbCARES® at 1-844-599-CARE (2273) or ucbCARES@UCB.com. We're here to help.</div>
-        <div class="footerBlock2">Important Safety Information  |  Prescribing Information  |  Privacy Policy  |  Terms of Use  |  Contact Us</div>
+        <div class="text ">If you have any questions or want more information, please contact ucbCARES® at 1-844-599-CARE (2273) or ucbCARES@UCB.com. We're here to help.</div>
+        <div class="text footertxt">Important Safety Information  |  Prescribing Information  |  Privacy Policy  |  Terms of Use  |  Contact Us</div>
     </div>  
     <div class="footerBlockSecond">
-        <div class="footerBlock3">BRIVIACT® and ucbCARES® are registered trademarks of the UCB Group of Companies.
+        <div class="text">BRIVIACT® and ucbCARES® are registered trademarks of the UCB Group of Companies.
             All other trademarks are the property of their respective holders.
             ©2020 UCB, Inc., Smyrna, GA 30080. All rights reserved.
             US-P-BR-EPOS-2000022 </div>
         <div class="footerBlock4">
             <img src="images/ucb_1c_wht_w_tag.png" alt="footerLogo">
-           <p> UCB Inc., 1950 Lake Park Driv <br> Smyrna, GA 30080</p>
+           <p class="text"> UCB Inc., 1950 Lake Park Driv <br> Smyrna, GA 30080</p>
         </div>
     </div>
    
 </footer>
 </section>
 
+
+
+
+
+
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
 </body>
 </html>

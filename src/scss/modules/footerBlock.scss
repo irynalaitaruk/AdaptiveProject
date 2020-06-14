@@ -22,7 +22,7 @@ footer{
         @include md-only{
             font-size: 12px;
         }
-
+/*
         .footerBlock1{
             width: auto;
             padding: 15px;
@@ -30,7 +30,7 @@ footer{
         .footerBlock2{
           @extend.footerBlock1;
         }
-   
+   */
     }
     .footerBlockSecond{
         column-count: 2;

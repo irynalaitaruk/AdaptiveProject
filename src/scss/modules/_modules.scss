@@ -1,8 +1,16 @@
-//@import "config";
-//@import "mixins";
+@import "config";
+@import "mixins";
 
-@import "topHeader";
+//@import "topHeader";
 @import "nav";
 @import "mainBlock";
+@import "briviactExibits";
 @import "molecularBlock";
 @import "footerBlock";
+
+.text{
+    font-size: 14px;
+     @include md-only{
+        font-size: 12px;
+     }
+}

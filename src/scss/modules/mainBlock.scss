@@ -2,34 +2,40 @@
 @import "../mixins";
 
  main{
-     height: auto;
-     width: auto;
+     //height: auto;
+     //width: auto;
 
   
      
     .block1{
         background-color: $font-color;
-        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        //padding-top: 20px;
+        //overflow: auto;
 
-        @include sm{
-            padding-top: 80px;
-         }
+        //@include sm{
+         //   padding-top: 80px;
+        // }
 
         .triangle{
-            float: left;
+            margin-left: 0;
+            //float: left;
             //margin-right: 50px;
 
-            @include sm{
-                padding-right: 50px;
-            }
+            //@include sm{
+             //   padding-right: 50px;
+            //}
 
-            @include md-only{
-                padding-right: 50px;
-            }
+            //@include md-only{
+                //padding-right: 50px;
+           // }
 
-            @include lg{
-                padding-right: 50px;
-            }
+           // @include lg{
+               // padding-right: 50px;
+
+           // }
         }
 
         .headerText{

@@ -1,16 +1,30 @@
 *{
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
-@import "config";
-@import "mixins";
-
 body{
         width: auto;
         height: auto;
         margin: 0 auto;
-        font-family: Roboto;
+        font-family: 'Roboto', sans-serif;
         background-color: $main-color;
+}
+.mainBox{
+    width: 960px;
+    height: auto;
+    border: 1px solid $font-color;
+    margin: auto;
+    box-shadow: $font-color;
+    background-color: $main-color;
+
+    @include sm{
+        width: 100%;
+    }
+
+    @include md-only{
+        width: 100%;
+    }
 }
 li{
     list-style: none;
@@ -23,7 +37,5 @@ li{
       text-decoration: none;
       color: $text-color;
       cursor: pointer;
-
-
    }
   }

@@ -5,14 +5,13 @@
      }
 
  }
-
  // Medium devices
  @mixin md {
     @media (max-width: #{$screen-md-max}) {
             @content;
     }
  }
- //
+ // Medium device only
  @mixin md-only {
      @media screen and (min-width: $screen-sm-max)  and (max-width: $screen-md-max) {
          @content;
@@ -23,11 +22,4 @@
     @media (min-width: #{$screen-lg-min}) {
         @content;
     }
- }
-
-
-
-
- @mixin google-font($name) {
-     @import url('https://fonts.googleapis.com/css?family=#{$name}');
  }
