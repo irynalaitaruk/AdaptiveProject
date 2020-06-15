@@ -1,23 +1,6 @@
 //@import "config";
 //@import "mixins";
-/*
-.mainBox{
-    width: 960px;
-    height: auto;
-    border: 1px solid $font-color;
-    margin: auto;
-    box-shadow: $font-color;
-    background-color: $main-color;
-
-    @include sm{
-        width: 100%;
-    }
-
-    @include md-only{
-        width: 100%;
-    }
-}
-*/
+//header 
 .topHeader{
     display: flex;
     flex-direction: row;
@@ -30,3 +13,227 @@
        padding: 20px;
     }
 }
+//navigation
+.overlay-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 14px;
+    padding: 35px;
+    background-color: $font-color;
+  
+      @include sm{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        }
+      @include md-only{
+        display: flex;
+        flex-direction: row;
+        }
+      @include lg{
+        display: flex;
+        flex-direction: row;
+        }
+        li{
+            list-style: none;
+        }
+  }
+  //navigation style for mobile
+  @include sm {   
+  nav {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $font-color;
+    opacity: 0.9;
+    overflow-y: hidden;
+    transition: 0.5s;
+    a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        color: $main-color;
+        transition: 0.3s;
+      }
+   }
+}  
+//block with main header
+.header_block{
+    background-color: $font-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    .triangle_img{
+        margin-left: 0;
+    }
+    .header_title{
+         padding: 30px;
+    
+        @include sm{
+            padding: 20px;
+        }
+
+        @include md-only{
+            padding: 8px;
+        }
+    } 
+    .main_title{
+        color: $text-color;
+        font-size: 25px;
+    
+        @include sm {
+            margin-top: auto;
+            font-size: 14px;
+        }
+        @include md-only {
+            margin-top: 50px;
+            font-size: 20px;
+            padding: 10px;
+        }  
+    }
+    .main_subtitle{
+        font-size: 20px;
+        color: #e6e1ce;
+    
+        @include sm {
+            margin-top: auto;
+            font-size: 12px;
+        }
+        @include md-only {
+            margin-top: auto;
+            font-size: 17px;
+        }
+    }
+}
+//BRIVIACT molecular block
+.briviact_molecular_block{
+    padding: 40px;
+
+    @include sm{
+        font-size: smaller;
+    }
+    @include md-only{
+        font-size: smaller;
+    }
+    .imgBlock{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include sm{
+            flex-direction: column;
+        }
+    }
+}
+//BRIVIACT exibits block
+.briviact_exibits{
+    background-color:  #f8f6f0;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+//adult afficacy block
+.adult_afficacy{
+    background-color: #f8f6f0;
+    padding: 40px; 
+
+    @include sm{
+        padding: 40px;
+    }
+    @include md-only{
+        padding: 70px;
+    }
+    @include lg{
+        padding: 40px;
+    }
+    .mainSectionBlock{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include sm {
+            align-items: center;
+        }
+        @include lg {
+            justify-content: space-around;
+        }
+        .trialDesign{
+            width: 40%;
+            padding: 20px;
+            margin: 15px;
+            line-height: 20px;
+            background-color: white;
+            border-radius: 20px;
+
+            @include sm {
+                font-size: 12px;
+            }
+            @include md-only {
+                font-size: 12px;
+            }
+        }
+        .trialResult{
+            @extend .trialDesign;
+            background-color: #f8f6f0;
+        }
+        .briviact{
+            width: 100%;
+            @extend .trialResult;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }   
+}
+//footer
+footer{
+    background-color: $footer-color;
+    padding: 20px;
+    color: $main-color;
+
+    .footerBlockFirst{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 14px;
+
+        @include md-only{
+            font-size: 12px;
+        }
+    }
+    .footerBlockSecond{
+        column-count: 2;
+        column-gap: 60px;
+        padding: 20px;
+        font-size: 14px;
+    
+        @include sm{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        @include md-only{
+            font-size: 12px;
+        }
+  }
+  @include sm{
+    .footertxt{
+     padding: 10px;
+      }
+    }
+    @include md-only{
+      .footertxt{
+       padding: 10px;
+        }
+      }
+} 

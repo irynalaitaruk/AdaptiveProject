@@ -1,0 +1,127 @@
+//text for header
+.text{
+    font-size: 14px;
+     @include md-only{
+        font-size: 12px;
+     }
+}
+//links
+@include md-only{
+  a{
+    font-size: 12px;
+  }
+}
+//headers 
+h2{
+    color: $font-color;
+    text-align: center;
+    font-size: $headers-fontSize;
+    font-weight: 300;
+
+    @include sm{
+        font-size: 18px;
+    }
+
+    @include md-only{
+        font-size: 25px;
+    }
+
+    @include lg{
+        font-size: 25px;
+    }
+}
+//header
+h4{
+    padding: 10px;
+}
+//subtitles for blocks
+.subtitle{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 600;
+
+    @include sm{
+        font-size: 12px;
+    }
+    @include lg{
+        margin-left: 140px;
+    }
+}
+//horizontal line
+hr {
+    position: relative;
+    width: 80%;
+    font-size: 1px;
+    border: 0.2px solid $main-color;
+
+    @include sm{
+        margin: 10px 120px;
+        width: 50%;
+    }
+
+    @include md-only{
+        width: 80%;
+    }
+ }
+ //notes for blocks
+ .footnote{
+    margin-top: 40px;
+    font-size: smaller;
+}
+//disc lists
+.list{
+    padding: 20px;
+    margin: 15px;
+    line-height: 20px;
+}
+//
+.image{
+    margin: 30px;
+}
+//captions for tables
+caption{
+    padding: 10px;
+    background-color: cadetblue;
+    margin-bottom: 2px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+//tables style
+table{
+    background-color: $main-color;
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+
+    @include sm{
+      font-size: 12px;
+  }
+  @include md-only{
+      font-size: 12px;
+  }
+  table, th, td{
+      border: 1px solid #f8f6f0;
+      padding: 10px 25px;
+  }
+}
+//images
+figure{
+    text-align: center;
+    padding: 10px;
+    position: relative;
+
+    @include sm {
+        width: 100%;
+        text-align: center;              
+    }
+    figcaption{
+        font-weight: 600;
+        padding: 10px;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+}
+
