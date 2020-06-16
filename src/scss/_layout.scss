@@ -1,7 +1,5 @@
-//@import "config";
-//@import "mixins";
 //header 
-.topHeader{
+.top_header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -91,7 +89,6 @@
         font-size: 25px;
     
         @include sm {
-            margin-top: auto;
             font-size: 14px;
         }
         @include md-only {
@@ -102,14 +99,12 @@
     }
     .main_subtitle{
         font-size: 20px;
-        color: #e6e1ce;
+        color: $main-subtitle-color;
     
         @include sm {
-            margin-top: auto;
             font-size: 12px;
         }
         @include md-only {
-            margin-top: auto;
             font-size: 17px;
         }
     }
@@ -119,12 +114,12 @@
     padding: 40px;
 
     @include sm{
-        font-size: smaller;
+        font-size: 12px;
     }
     @include md-only{
-        font-size: smaller;
+        font-size: 14px;
     }
-    .imgBlock{
+    .img_block{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -132,60 +127,67 @@
         @include sm{
             flex-direction: column;
         }
+        img{
+            border-radius: 15px;
+        }
     }
 }
 //BRIVIACT exibits block
 .briviact_exibits{
-    background-color:  #f8f6f0;
+    background-color: $bgblock-color;
     padding: 20px;
     margin-bottom: 10px;
 }
 //adult afficacy block
 .adult_afficacy{
-    background-color: #f8f6f0;
+    background-color: $bgblock-color;
     padding: 40px; 
 
     @include sm{
         padding: 40px;
+        font-size: 12px;
     }
     @include md-only{
         padding: 70px;
+        font-size: 14px;
     }
     @include lg{
         padding: 40px;
     }
-    .mainSectionBlock{
+    .main_section_block{
         display: flex;
         flex-wrap: wrap;
 
         @include sm {
             align-items: center;
+            flex-direction: column;
         }
         @include lg {
             justify-content: space-around;
         }
-        .trialDesign{
+        .trial_design{
             width: 40%;
             padding: 20px;
             margin: 15px;
             line-height: 20px;
-            background-color: white;
+            background-color: $text-color;
             border-radius: 20px;
 
             @include sm {
                 font-size: 12px;
+                width: 100%;
             }
             @include md-only {
                 font-size: 12px;
             }
         }
-        .trialResult{
-            @extend .trialDesign;
-            background-color: #f8f6f0;
+        .trial_result{
+            @extend .trial_design;
+            background-color: $bgblock-color;
         }
         .briviact{
             width: 100%;
-            @extend .trialResult;
+            @extend .trial_result;
 
             @include sm {
                 width: 100%;
@@ -199,7 +201,7 @@ footer{
     padding: 20px;
     color: $main-color;
 
-    .footerBlockFirst{
+    .footer_block_first{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -207,11 +209,14 @@ footer{
         justify-content: flex-start;
         font-size: 14px;
 
+        @include sm{
+            font-size: 12px;
+        }
         @include md-only{
             font-size: 12px;
         }
     }
-    .footerBlockSecond{
+    .footer_block_second{
         column-count: 2;
         column-gap: 60px;
         padding: 20px;
@@ -221,6 +226,7 @@ footer{
             display: flex;
             flex-direction: column;
             padding: 10px;
+            font-size: 12px;
         }
         @include md-only{
             font-size: 12px;
@@ -228,12 +234,17 @@ footer{
   }
   @include sm{
     .footertxt{
-     padding: 10px;
+     padding: 20px;
       }
     }
     @include md-only{
       .footertxt{
-       padding: 10px;
+       padding: 20px;
         }
       }
+      @include lg{
+        .footertxt{
+         padding: 20px;
+          }
+        }
 } 

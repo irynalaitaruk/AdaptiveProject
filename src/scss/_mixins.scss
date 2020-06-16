@@ -3,7 +3,6 @@
     @media (max-width: #{$screen-sm-max}) {
             @content;
      }
-
  }
  // Medium devices
  @mixin md {

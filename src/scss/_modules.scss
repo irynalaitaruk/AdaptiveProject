@@ -21,11 +21,9 @@ h2{
     @include sm{
         font-size: 18px;
     }
-
     @include md-only{
         font-size: 25px;
     }
-
     @include lg{
         font-size: 25px;
     }
@@ -59,7 +57,6 @@ hr {
         margin: 10px 120px;
         width: 50%;
     }
-
     @include md-only{
         width: 80%;
     }
@@ -67,7 +64,7 @@ hr {
  //notes for blocks
  .footnote{
     margin-top: 40px;
-    font-size: smaller;
+    font-size: 12px;
 }
 //disc lists
 .list{
@@ -82,7 +79,7 @@ hr {
 //captions for tables
 caption{
     padding: 10px;
-    background-color: cadetblue;
+    background-color: $caption-color;
     margin-bottom: 2px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -96,14 +93,14 @@ table{
 
     @include sm{
       font-size: 12px;
-  }
-  @include md-only{
+    }
+    @include md-only{
       font-size: 12px;
-  }
-  table, th, td{
-      border: 1px solid #f8f6f0;
-      padding: 10px 25px;
-  }
+    }
+    table, th, td{
+       border: 1px solid $bgblock-color;
+       padding: 10px 25px;
+    }
 }
 //images
 figure{

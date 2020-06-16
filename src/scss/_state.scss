@@ -21,7 +21,7 @@
 //menu icon for mobile version
 .humburger-menu{
     display: block;
-    font-size:50px;
+    font-size: 50px;
     cursor:pointer;
     background-color: $font-color;
     color: $main-color;
@@ -41,13 +41,10 @@
     @include sm{
         display: none;
     }
-    @include md-only{
-     width: 100%;
-   }
  }
 //
 .slice2{
-     width: 100%;
+     width: 960px;
      margin-bottom: -5px;
 
     @include sm{

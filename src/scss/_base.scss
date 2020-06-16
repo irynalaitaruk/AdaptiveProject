@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 body{
-        width: auto;
-        height: auto;
-        margin: 0 auto;
         font-family: 'Roboto', sans-serif;
         background-color: $main-color;
 }
-.mainBox{
+//box for all
+.main_box{
     width: 960px;
-    height: auto;
     border: 1px solid $font-color;
     margin: auto;
     box-shadow: $font-color;
@@ -21,7 +18,6 @@ body{
     @include sm{
         width: 100%;
     }
-
     @include md-only{
         width: 100%;
     }
@@ -32,13 +28,10 @@ li{
     @include sm{
       padding-top: 10px;
      }
+//links
 a{
     text-decoration: none;
     color: $main-color; 
    }
   }
-.briviact_molecular_block{
-    img{
-        border-radius: 15px;
-    }
-}
+
