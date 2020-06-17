@@ -120,30 +120,6 @@
     @include md-only{
         font-size: 14px;
     }
-    .row{
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-
-        @include sm{
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            //padding: 50px;
-        
-        }
-    }
-    .column{
-        width: 50%;
-
-        @include sm{
-            width: 100%;
-        }
-    }
-    .img_list{
-        display: flex;
-        align-items: center;
-    }
 }
 //BRIVIACT molecular block
 .briviact_molecular_block{
@@ -173,6 +149,21 @@
     background-color: $bgblock-color;
     padding: 20px;
     margin-bottom: 10px;
+}
+//dose_conversion block
+.dose_conversion{
+    padding: 40px;
+
+    @include sm{
+        font-size: 12px;
+    }
+    @include md-only{
+        font-size: 14px;
+    }
+
+    tr:nth-child(odd){
+        background-color: $bgblock-color
+     }
 }
 //adult afficacy block
 .adult_afficacy{
