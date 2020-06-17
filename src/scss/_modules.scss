@@ -1,6 +1,10 @@
 //text for header
 .text{
     font-size: 14px;
+
+    @include sm{
+        font-size: 12px;
+     }
      @include md-only{
         font-size: 12px;
      }
@@ -31,6 +35,10 @@ h2{
 //header
 h4{
     padding: 10px;
+
+    @include sm {
+        font-size: 12px;
+    }
 }
 //subtitles for blocks
 .subtitle{
@@ -95,7 +103,7 @@ table{
       font-size: 12px;
     }
     @include md-only{
-      font-size: 12px;
+      font-size: 14px;
     }
     table, th, td{
        border: 1px solid $bgblock-color;
@@ -120,5 +128,15 @@ figure{
             width: 100%;
         }
     }
+}
+//images
+.imgCircle{
+    width: 80px;
+    margin: 10px;
+}
+//
+.column_text{
+    text-align: left;
+    margin-left: 0;
 }
 

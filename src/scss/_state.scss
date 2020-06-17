@@ -37,6 +37,7 @@
 //
   .slice{
     width: 100%;
+    background-color: $bgblock-color;
 
     @include sm{
         display: none;
