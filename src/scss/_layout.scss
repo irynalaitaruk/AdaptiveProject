@@ -222,6 +222,22 @@
         }
     }   
 }
+//safety_profile block
+.safety_profile{
+    padding: 40px;
+    
+    @include sm{
+        font-size: 12px;
+    }
+    @include md-only{
+        font-size: 14px;
+    }
+    @include sm{
+        table{
+            font-size: 10px;
+        }
+    }
+}
 //footer
 footer{
     background-color: $footer-color;

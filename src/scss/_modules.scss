@@ -89,8 +89,16 @@ caption{
     padding: 10px;
     background-color: $caption-color;
     margin-bottom: 2px;
+    color: $main-subtitle-color;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+.caption{
+    padding: 10px;
+    background-color: $caption-color;
+    margin-bottom: 2px;
+    color: $main-subtitle-color;
 }
 //tables style
 table{
@@ -98,6 +106,7 @@ table{
     width: 80%;
     margin-top: 20px;
     border-collapse: collapse;
+    //table-layout: auto;
 
     @include sm{
       font-size: 12px;
@@ -161,4 +170,10 @@ figure{
 .img_list{
     display: flex;
     align-items: center;
+}
+.left_radius{
+    border-top-left-radius: 25px;
+}
+.right_radius{
+    border-top-right-radius: 25px;
 }
