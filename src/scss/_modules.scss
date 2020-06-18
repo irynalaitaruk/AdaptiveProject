@@ -177,3 +177,45 @@ figure{
 .right_radius{
     border-top-right-radius: 25px;
 }
+//@include
+.main_section_block{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include sm {
+            align-items: center;
+            flex-direction: column;
+        }
+        @include lg {
+            justify-content: space-around;
+        }
+        .trial_design{
+            width: 40%;
+            padding: 20px;
+            margin: 15px;
+            line-height: 20px;
+            background-color: $text-color;
+            border-radius: 20px;
+
+            @include sm {
+                font-size: 12px;
+                width: 100%;
+            }
+            @include md-only {
+                font-size: 14px;
+            }
+        }
+        .trial_result{
+            @extend .trial_design;
+            background-color: $bgblock-color;
+        }
+        .briviact{
+            width: 100%;
+            @extend .trial_result;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+
+    }
