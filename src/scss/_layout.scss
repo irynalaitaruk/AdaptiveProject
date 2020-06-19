@@ -210,6 +210,32 @@
         background-color: $main-color !important;
     }
 }
+//briviact_provides block
+.briviact_provides{
+    background-color: $bgblock-color;
+    padding: 40px;
+
+    @include sm{
+        font-size: 12px;
+    }
+    @include md-only{
+        font-size: 14px;
+    }
+}
+//important_information block
+.important_information{
+    padding: 0 40px 40px;
+
+    @include sm{
+        font-size: 12px;
+    }
+    @include md-only{
+        font-size: 14px;
+    }
+    li.decimal{
+        list-style-type: decimal;
+    }
+}
 //footer
 footer{
     background-color: $footer-color;
